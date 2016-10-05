@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>Robits</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   </head>
   <body>
-    <% new_bender = BendingUnit.new(ARGV[0]) %>
     <h1><%= new_bender.say_hi %></h1>
     <h1><%= new_bender.say_name %></h1>
-    <h1><%= new_bender.bend(ARGV[1]) %></h1>
+    <h1><%= new_bender.bend(unbent_thing) %></h1>
   </body>
 </html>
