@@ -1,0 +1,10 @@
+* {
+  box-sizing: border-box;
+  border: 1px dashed red;
+}
+
+body {
+  font-family: helvetica;
+  background-color: #000000;
+  color: #EEE0CB;
+}

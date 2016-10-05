@@ -50,28 +50,36 @@ unbent_thing = ARGV[1]
 
 #Adventure Mode
 
+our_class = %w(Luiz Zachary Chris Brent Keith Michael Jon)
+
 def upgrade(group)
   group.collect { |human| Robot.new("#{human} v2.0")}
 end
 
-our_class = %w(Luiz Zachary Chris Brent Keith Michael Jon)
-
 new_class = upgrade(our_class)
 
-# new_class = our_class.collect{|human| Robot.new("#{human} v2.0")}
-
-puts new_class
-
-#
-# new_class.each {|robot| puts robot.height}
-#
 def robot_roll_call(group)
-  group.each { |member| puts "#{member}, here!"}
+  group.each { |member| puts "#{member}, here! I am #{member.height} units tall. You will be upgraded."}
 end
+
+def solo_sound_off(group)
+  group.collect { |member| "#{member}, here! I am #{member.height} units tall. You will be upgraded." }
+end
+
+calls = solo_sound_off(new_class)
 
 robot_roll_call(new_class)
 
-new_class.each {|robot| puts "I am #{robot.height} units tall."}
+new_class.each { |robot| puts "I am #{robot.height} units tall."}
+
+def height=
+
+end
+
+def height
+
+end
+
 
 new_file = File.open("./#{ARGV[0]}.html", "w+")
 new_file << ERB.new(File.read("index.html.erb")).result(binding)
