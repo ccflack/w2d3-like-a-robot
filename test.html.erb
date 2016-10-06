@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Stylesheets go here. -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+  <div class="col-xs-8 col-xs-offset-2 container">
+    <% count = 0 %>
+    <% new_class.each do |robot| %>
+    <div class="row">
+      <div class "col-xs-4 container">
+        <img src="https://robohash.org/<%=robot.name%>" class="margin-auto" />
+        <div class="col-xs-6 pull-top pull-right robot_name">
+          <h2 class="text-center"><%= robot.name %></h2>
+        <div class="pull-right robot_bio">
+          <h4><%= calls[count] %></h3>
+        </div>
+        </div>
+      </div>
+    </div>
+    <% count = count+1 %>
+    <% end %>
+  </div><!-- Content goes here. -->
+  <!-- Scripts go here. -->
+</body>
+</html>
